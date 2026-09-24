@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1016 250" width="1016" height="250" role="img" aria-label="The four ghosts and how each one hunts"><defs>
+  <filter id="glow" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs><rect width="1016" height="250" rx="14" fill="#02030a"/>
+<g transform="translate(20 20)">
+  <rect width="232" height="210" rx="10" fill="#050a26" stroke="#ff2b2b" stroke-width="2.5" opacity=".95"/>
+  <g transform="translate(116 54)" filter="url(#soft)"><g transform="scale(4) translate(-7 -7)"><path d="M1 14V6a6 6 0 0 1 12 0v8l-2-2-2 2-2-2-2 2-2-2z" fill="#ff2b2b"/>
+    <rect x="3" y="4" width="3" height="4" fill="#fff"/><rect x="8" y="4" width="3" height="4" fill="#fff"/>
+    <rect x="4" y="5" width="2" height="2" fill="#1a2cff"/><rect x="9" y="5" width="2" height="2" fill="#1a2cff"/></g></g>
+  <text x="116" y="112" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-weight="700" font-size="20" letter-spacing="2" fill="#ff2b2b">BLINKY</text>
+  <text x="116" y="134" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="12" letter-spacing="2" fill="#8ea6ff">THE HUNTER</text>
+  <g font-family="'Courier New',Courier,monospace" font-size="14" fill="#dbe2ff" text-anchor="middle"><text x="116" y="162">Targets your tile</text><text x="116" y="180">directly. Speeds up</text><text x="116" y="198">as pellets run out.</text></g>
+</g>
+<g transform="translate(268 20)">
+  <rect width="232" height="210" rx="10" fill="#050a26" stroke="#ff8fd8" stroke-width="2.5" opacity=".95"/>
+  <g transform="translate(116 54)" filter="url(#soft)"><g transform="scale(4) translate(-7 -7)"><path d="M1 14V6a6 6 0 0 1 12 0v8l-2-2-2 2-2-2-2 2-2-2z" fill="#ff8fd8"/>
+    <rect x="3" y="4" width="3" height="4" fill="#fff"/><rect x="8" y="4" width="3" height="4" fill="#fff"/>
+    <rect x="3" y="5" width="2" height="2" fill="#1a2cff"/><rect x="8" y="5" width="2" height="2" fill="#1a2cff"/></g></g>
+  <text x="116" y="112" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-weight="700" font-size="20" letter-spacing="2" fill="#ff8fd8">PINKY</text>
+  <text x="116" y="134" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="12" letter-spacing="2" fill="#8ea6ff">THE AMBUSHER</text>
+  <g font-family="'Courier New',Courier,monospace" font-size="14" fill="#dbe2ff" text-anchor="middle"><text x="116" y="162">Aims 4 tiles ahead</text><text x="116" y="180">of you. Never run</text><text x="116" y="198">straight at her.</text></g>
+</g>
+<g transform="translate(516 20)">
+  <rect width="232" height="210" rx="10" fill="#050a26" stroke="#19e6ff" stroke-width="2.5" opacity=".95"/>
+  <g transform="translate(116 54)" filter="url(#soft)"><g transform="scale(4) translate(-7 -7)"><path d="M1 14V6a6 6 0 0 1 12 0v8l-2-2-2 2-2-2-2 2-2-2z" fill="#19e6ff"/>
+    <rect x="3" y="4" width="3" height="4" fill="#fff"/><rect x="8" y="4" width="3" height="4" fill="#fff"/>
+    <rect x="4" y="5" width="2" height="2" fill="#1a2cff"/><rect x="9" y="5" width="2" height="2" fill="#1a2cff"/></g></g>
+  <text x="116" y="112" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-weight="700" font-size="20" letter-spacing="2" fill="#19e6ff">INKY</text>
+  <text x="116" y="134" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="12" letter-spacing="2" fill="#8ea6ff">THE TACTICIAN</text>
+  <g font-family="'Courier New',Courier,monospace" font-size="14" fill="#dbe2ff" text-anchor="middle"><text x="116" y="162">Pairs with Blinky to</text><text x="116" y="180">trap you from two</text><text x="116" y="198">sides at once.</text></g>
+</g>
+<g transform="translate(764 20)">
+  <rect width="232" height="210" rx="10" fill="#050a26" stroke="#ffa733" stroke-width="2.5" opacity=".95"/>
+  <g transform="translate(116 54)" filter="url(#soft)"><g transform="scale(4) translate(-7 -7)"><path d="M1 14V6a6 6 0 0 1 12 0v8l-2-2-2 2-2-2-2 2-2-2z" fill="#ffa733"/>
+    <rect x="3" y="4" width="3" height="4" fill="#fff"/><rect x="8" y="4" width="3" height="4" fill="#fff"/>
+    <rect x="3" y="5" width="2" height="2" fill="#1a2cff"/><rect x="8" y="5" width="2" height="2" fill="#1a2cff"/></g></g>
+  <text x="116" y="112" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-weight="700" font-size="20" letter-spacing="2" fill="#ffa733">CLYDE</text>
+  <text x="116" y="134" text-anchor="middle" font-family="'Courier New',Courier,monospace" font-size="12" letter-spacing="2" fill="#8ea6ff">THE COWARD</text>
+  <g font-family="'Courier New',Courier,monospace" font-size="14" fill="#dbe2ff" text-anchor="middle"><text x="116" y="162">Chases from afar,</text><text x="116" y="180">loses his nerve</text><text x="116" y="198">inside 8 tiles.</text></g>
+</g>
+</svg>

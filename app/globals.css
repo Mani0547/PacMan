@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  --font-arcade: "Press Start 2P", "Courier New", monospace;
+  --font-retro: "VT323", "Courier New", monospace;
+  --color-void: #02030a;
+  --color-neon: #2f5bff;
+  --color-pac: #ffe600;
+}
+
+:root { color-scheme: dark; --pac: #ffe600; --neon: #2f5bff; --pink: #ff8fd8; --cyan: #19e6ff; --red: #ff2b2b; --orange: #ffa733; --green: #5bff8a; }
+
+html, body { height: 100%; margin: 0; background: #02030a; }
+body { font-family: var(--font-retro); font-size: 22px; line-height: 1.15; color: #fff; -webkit-font-smoothing: none; overflow-x: hidden; }
+::selection { background: var(--pac); color: #02030a; }
+button { font: inherit; cursor: pointer; }
+
+/* ---------- CRT treatment (subtle) ---------- */
+.crt { position: relative; }
+.crt::before { content: ""; position: fixed; inset: 0; z-index: 60; pointer-events: none;
+  background: repeating-linear-gradient(to bottom, rgba(255,255,255,0.028) 0 1px, transparent 1px 3px); mix-blend-mode: screen; }
+.crt::after { content: ""; position: fixed; inset: 0; z-index: 61; pointer-events: none;
+  background: radial-gradient(ellipse at center, transparent 58%, rgba(0,0,0,0.55) 100%); }
+
+/* ---------- type ---------- */
+.font-arcade { font-family: var(--font-arcade); }
+.neon-yellow { color: var(--pac); text-shadow: 0 0 8px rgba(255,230,0,.55), 0 0 22px rgba(255,170,0,.3); }
+.neon-blue { color: #8ea6ff; text-shadow: 0 0 8px rgba(47,91,255,.9), 0 0 24px rgba(47,91,255,.45); }
+.neon-pink { color: var(--pink); text-shadow: 0 0 8px rgba(255,143,216,.6); }
+.neon-cyan { color: var(--cyan); text-shadow: 0 0 8px rgba(25,230,255,.55); }
+.neon-red { color: var(--red); text-shadow: 0 0 8px rgba(255,43,43,.6); }
+.neon-green { color: var(--green); text-shadow: 0 0 8px rgba(91,255,138,.5); }
+.label { font-family: var(--font-arcade); font-size: 10px; letter-spacing: .08em; color: #7f95ff; }
+.pixel-title { font-family: var(--font-arcade); color: var(--pac); text-shadow: 4px 4px 0 #b07a00, 0 0 28px rgba(255,190,0,.5); }
+
+/* ---------- panels + buttons ---------- */
+.panel { border: 3px solid var(--neon); background: linear-gradient(180deg, rgba(5,10,42,.92), rgba(2,3,10,.92));
+  box-shadow: 0 0 0 2px #02030a, 0 0 22px rgba(47,91,255,.4), inset 0 0 26px rgba(47,91,255,.14); }
+.arcade-btn { position: relative; display: block; width: 100%; text-align: left; font-family: var(--font-arcade); font-size: 13px; letter-spacing: .06em; color: #fff;
+  padding: 15px 16px 15px 44px; border: 3px solid var(--neon); background: #050a26; transition: color .08s, border-color .08s, box-shadow .08s; }
+.arcade-btn::before { content: "▶"; position: absolute; left: 15px; top: 50%; transform: translateY(-50%); font-size: 11px; color: var(--pac); opacity: 0; }
+.arcade-btn:hover:not(:disabled), .arcade-btn:focus-visible { outline: none; color: var(--pac); border-color: var(--pac); box-shadow: 0 0 18px rgba(255,230,0,.35); }
+.arcade-btn:hover:not(:disabled)::before, .arcade-btn:focus-visible::before { opacity: 1; }
+.arcade-btn:disabled { opacity: .4; cursor: not-allowed; }
+.arcade-btn.primary { background: var(--pac); color: #02030a; border-color: var(--pac); }
+.arcade-btn.primary::before { color: #02030a; opacity: 1; }
+.arcade-btn.primary:hover:not(:disabled), .arcade-btn.primary:focus-visible { background: #fff; border-color: #fff; color: #02030a; box-shadow: 0 0 24px rgba(255,255,255,.5); }
+.arcade-btn.danger:hover:not(:disabled), .arcade-btn.danger:focus-visible { color: var(--red); border-color: var(--red); box-shadow: 0 0 18px rgba(255,43,43,.4); }
+.arcade-btn.danger::before { color: var(--red); }
+.arcade-btn.compact { padding: 10px 12px 10px 34px; font-size: 10px; }
+.arcade-btn.compact::before { left: 11px; font-size: 9px; }
+
+.arcade-input { width: 100%; font-family: var(--font-arcade); font-size: 13px; color: #fff; background: #02030a; border: 3px solid var(--neon); padding: 14px 14px; letter-spacing: .08em; }
+.arcade-input::placeholder { color: #4a5aa8; }
+.arcade-input:focus { outline: none; border-color: var(--pac); box-shadow: 0 0 18px rgba(255,230,0,.3); }
+
+.tab { font-family: var(--font-arcade); font-size: 10px; padding: 10px 12px; border: 2px solid #1c2a78; color: #7f95ff; background: #02030a; }
+.tab:hover { color: #fff; border-color: var(--neon); }
+.tab[aria-selected="true"] { color: #02030a; background: var(--pac); border-color: var(--pac); }
+.tab:focus-visible { outline: 2px solid var(--pac); outline-offset: 2px; }
+
+/* ---------- animations ---------- */
+@keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+.blink { animation: blink 1s steps(1) infinite; }
+@keyframes appear { to { opacity: 1; } }
+.appear { opacity: 0; animation: appear 0s steps(1) forwards; }
+
+@keyframes chomp {
+  0%   { clip-path: polygon(100% 72%, 46% 50%, 100% 28%, 100% 0, 0 0, 0 100%, 100% 100%); }
+  100% { clip-path: polygon(100% 52%, 46% 50%, 100% 48%, 100% 0, 0 0, 0 100%, 100% 100%); }
+}
+.pac-chomp { border-radius: 50%; background: var(--pac); box-shadow: 0 0 14px rgba(255,220,0,.6); animation: chomp .3s steps(3) infinite alternate; }
+.pac-chomp.flip { transform: scaleX(-1); }
+
+@keyframes dots-flow { to { background-position-x: -22px; } }
+.dots-flow { background: radial-gradient(circle, #ffd6bd 3px, transparent 3.5px) 0 50% / 22px 100% repeat-x; animation: dots-flow .5s linear infinite; }
+
+@keyframes parade { from { transform: translateX(-30vw); } to { transform: translateX(130vw); } }
+.parade { animation: parade 9s linear infinite; }
+@keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+.bob { animation: bob .5s steps(2) infinite; }
+
+@keyframes glow-pulse { 0%, 100% { text-shadow: 0 0 10px rgba(255,230,0,.6), 0 0 30px rgba(255,150,0,.4); transform: scale(1); } 50% { text-shadow: 0 0 18px rgba(255,255,255,.9), 0 0 50px rgba(255,190,0,.8); transform: scale(1.06); } }
+.high-score { animation: glow-pulse 0.9s ease-in-out infinite; }
+@keyframes sparkle { 0% { transform: translate(0,0) scale(1); opacity: 1; } 100% { transform: translate(var(--dx), var(--dy)) scale(0); opacity: 0; } }
+.sparkle { position: absolute; width: 8px; height: 8px; left: 50%; top: 50%; animation: sparkle 1.6s ease-out infinite; }
+@keyframes drop-in { from { transform: scale(.94); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+.drop-in { animation: drop-in .18s ease-out both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .parade, .bob, .sparkle, .high-score, .dots-flow, .pac-chomp { animation: none !important; }
+  .parade { transform: translateX(20vw); }
+}
