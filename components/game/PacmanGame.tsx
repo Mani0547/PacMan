@@ -63,11 +63,11 @@ export default function PacmanGame({ player, difficulty, onExit, onLeaderboard, 
   const doRestartGame = () => { setConfirm(null); setHud(null); engineRef.current?.restartGame(); };
 
   return (
-    <div className="crt fixed inset-0 flex flex-col bg-[#02030a]">
+    <div className="crt fixed inset-0 flex h-screen flex-col overflow-hidden bg-[#02030a]">
       {hud && <HudBar hud={hud} />}
-      <div className="flex min-h-0 flex-1">
+      <div className="flex min-h-0 flex-1 overflow-hidden">
         {hud && <HudLeft hud={hud} />}
-        <div className="relative min-h-0 min-w-0 flex-1">
+        <div className="relative min-h-0 min-w-0 flex-1 overflow-hidden">
           <GameCanvas options={options} onEngine={(e) => { engineRef.current = e; }} />
           {paused && !result && (
             <PauseMenu confirm={confirm} onConfirm={setConfirm} onResume={resume} onRestartLevel={doRestartLevel} onRestartGame={doRestartGame} onQuit={onExit} />

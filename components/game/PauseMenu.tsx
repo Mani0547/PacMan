@@ -53,8 +53,8 @@ function ConfirmView({ kind, onYes, onNo }: { kind: Exclude<Confirm, null>; onYe
 
 export default function PauseMenu({ confirm, onConfirm, onResume, onRestartLevel, onRestartGame, onQuit }: Props) {
   return (
-    <div className="absolute inset-0 z-20 flex items-center justify-center bg-[#02030a]/80 p-4" role="dialog" aria-modal="true" aria-label="Pause menu">
-      <div className="panel drop-in w-full max-w-sm p-7">
+    <div className="absolute inset-0 z-20 flex items-center justify-center overflow-y-auto bg-[#02030a]/80 p-4" role="dialog" aria-modal="true" aria-label="Pause menu">
+      <div className="panel drop-in max-h-[calc(100vh-2rem)] w-full max-w-sm overflow-y-auto p-7">
         {confirm ? (
           <ConfirmView kind={confirm} onNo={() => onConfirm(null)} onYes={confirm === "level" ? onRestartLevel : confirm === "game" ? onRestartGame : onQuit} />
         ) : (

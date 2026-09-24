@@ -32,7 +32,7 @@ export default function GameOver({ playerName, result, save, onRetry, onPlayAgai
 
   return (
     <div className="absolute inset-0 z-20 flex items-center justify-center overflow-y-auto bg-[#02030a]/85 p-4" role="dialog" aria-modal="true" aria-label="Game over">
-      <div ref={ref} className="panel drop-in relative w-full max-w-lg p-7 text-center">
+      <div ref={ref} className="panel drop-in relative max-h-[calc(100vh-2rem)] w-full max-w-lg overflow-y-auto p-7 text-center">
         <h2 className="font-arcade text-[clamp(20px,3vw,28px)] neon-red">GAME OVER</h2>
         <p className="font-arcade mt-5 text-[12px] neon-blue">{playerName.toUpperCase()}</p>
         <p className="font-arcade mt-3 text-[clamp(26px,4.4vw,40px)] neon-yellow">{fmt(result.score)}</p>
